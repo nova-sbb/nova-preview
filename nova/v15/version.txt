@@ -1,2 +1,0 @@
-Version: 0.0.1-SNAPSHOT
-Build-Time: 2022-02-17 05:14:35.137
