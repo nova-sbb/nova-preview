@@ -1,4 +1,4 @@
-# NOVA 15 Documentation #
+# NOVA 15 Public Documentation #
 Welcome to documentation about NOVA 15.
 
 
