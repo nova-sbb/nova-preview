@@ -7,6 +7,7 @@ Welcome to documentation about NOVA 15.
 * [Preview version with maybe upcoming changes](https://nova-sbb.github.io/nova/preview)
 
 
+
 NOVA is working with so called [Semantic Versioning](https://semver.org). This means that backward compatibility within all released versions of NOVA 15 will be guaranteed. 
 
 
