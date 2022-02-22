@@ -75,7 +75,7 @@ components:
     # ch.voev.nova.services.nova.v15.common.Problem
     Problem:
       description: >-
-        Data structure represents a technical problem that occurred during a REST calls (aka as Problem JSON). It is compatible with problem structure as it is defined in RFC7807 (https://datatracker.ietf.org/doc/html/rfc7807).
+        Data structure represents a technical problem that occurred during a REST call (aka as Problem JSON). It is compatible with problem structure as it is defined in RFC7807 (https://datatracker.ietf.org/doc/html/rfc7807).
         
         In NOVA context problems are only used to indicate technical problems. Business problems need to provide way more context and thus will be part of response data structure.
         
