@@ -29,7 +29,8 @@ components:
   responses:
     # ch.voev.nova.services.nova.v15.common.ErrorResponse
     ErrorResponse:
-      description: TODO Please add comment to error response type
+      description: >-
+        Generic error response that is used by all NOVA services to indicate technical problems. Returned data structure is compliant with Problem JSON.
       content:
         application/problem+json:
           schema:
