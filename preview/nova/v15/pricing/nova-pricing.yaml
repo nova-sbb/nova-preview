@@ -75,7 +75,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/OfferResponse'
-          
   /nova/v15/pricing/offers/trip-search-offers:
     post:
       operationId: createTripSearchOffers
@@ -87,7 +86,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/OfferResponse'
-          
   /nova/v15/pricing/offers/interval-search-offers:
     post:
       operationId: createIntervalSearchOffers
@@ -99,10 +97,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/OfferResponse'
-          
 
 
 components:
+
   schemas:
     # ch.voev.nova.services.nova.v15.pricing.OfferResponse
     OfferResponse:
