@@ -128,12 +128,17 @@ components:
       type: object
     # ch.voev.nova.services.nova.v15.pricing.OfferResponse
     OfferResponse:
+      allOf:
+        - $ref: '../common/nova-common.yaml#/components/schemas/NOVAResponse'
       type: object
       properties:
-        messages: 
+        offers: 
           type: array
           items:
-            $ref: '../common/nova-common.yaml#/components/schemas/Message'
+            $ref: '#/components/schemas/Offer'
           minItems: 0
+    # ch.voev.nova.services.nova.v15.pricing.Offer
+    Offer:
+      type: object
 
     
