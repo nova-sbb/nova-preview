@@ -53,10 +53,13 @@ paths:
           required: false
           schema:
             type: string
-        - name: authorization
+        - name: Authorization
           in: header
           description: >- 
-            TODO Please add comment
+            Authorization header is required for all requests to NOVA. In compliance with SBB / NOVA Zero-Trust policy starting from NOVA 15 all clients need to have an authentication for the channel itself and for the acting user. Both information need to be provided within the authorization token.
+            
+            NOVA will still support request from anonymous end users but in this case all features that somehow need access to personal data (e.g. TKID) will not be available.
+            
           required: false
           schema:
             type: string
