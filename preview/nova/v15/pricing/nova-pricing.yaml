@@ -32,24 +32,10 @@ paths:
           required: false
           schema:
             type: string
-        - name: X-Conversation-Id
+        - name: Conversation-Id
           in: header
           description: >- 
-            TODO Please add comment
-          required: false
-          schema:
-            type: string
-        - name: traceId
-          in: header
-          description: >- 
-            TODO Please add comment
-          required: false
-          schema:
-            type: string
-        - name: spanId
-          in: header
-          description: >- 
-            TODO Please add comment
+            HTTP Header field Conversation-Id is used to group together a sequence of REST calls to NOVA. All requests that belong to the same business process are supposed to have the same conversation id.
           required: false
           schema:
             type: string
@@ -135,6 +121,11 @@ paths:
 components:
 
   schemas:
+    # ch.voev.nova.services.nova.v15.pricing.OfferRequest
+    OfferRequest:
+      allOf:
+        - $ref: '../common/nova-common.yaml#/components/schemas/NOVARequest'
+      type: object
     # ch.voev.nova.services.nova.v15.pricing.OfferResponse
     OfferResponse:
       type: object

@@ -38,6 +38,20 @@ components:
 
 
   schemas:
+    # ch.voev.nova.services.nova.v15.common.NOVARequest
+    NOVARequest:
+      discriminator:
+        propertyName: objectType
+        mapping:
+          NOVARequest: '#/components/schemas/NOVARequest'
+          OfferRequest: '../pricing/nova-pricing.yaml#/components/schemas/OfferRequest'
+      type: object
+      properties:
+        objectType:
+          description: Attribute is used as discriminator for inheritance between data types.
+          type: string
+      required:
+        - objectType
     # ch.voev.nova.services.nova.v15.common.Message
     Message:
       description: >-
@@ -117,6 +131,31 @@ components:
         - title
         - status
         - type
+    # ch.voev.nova.services.nova.v15.common.NOVAResponse
+    NOVAResponse:
+      type: object
+      properties:
+        messages: 
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
+          minItems: 0
+    # ch.voev.nova.services.nova.v15.common.DidokCode
+    DidokCode:
+      description: >-
+        Data structure describes codes for different kinds of sales locations. These codes are managed by a system outside NOVA named DIDOK. In NOVA DIDOK codes are used to identify point of sales physical as well as logical ones.
+      type: object
+      properties:
+        code: 
+          description: >-
+            Code value of a sales location as it was defined by DIDOK.
+          type: integer
+          format: int32
+          minimum: 0
+          exclusiveMinimum: true
+          readOnly: true
+      required:
+        - code
 
     
     # ch.voev.nova.services.nova.v15.common.MessageType
