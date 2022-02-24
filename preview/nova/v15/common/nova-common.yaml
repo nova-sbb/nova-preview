@@ -278,32 +278,17 @@ components:
     # ch.voev.nova.services.nova.v15.common.BusinessLog
     BusinessLog:
       type: object
-    # ch.voev.nova.services.nova.v15.common.CountryCode
-    CountryCode:
-      description: >-
-        <html>
-          <head>
-        		<style>
-        			p {padding:0px; margin:0px;}
-        		</style>
-        	</head>
-          <body>
-        Data type represents an ISO 3166 alpha-2 country code. These codes always consist of two capital letters like &quot;CH&quot; or &quot;FR&quot;</body>
-        </html>
-      type: object
-      properties:
-        code: 
-          description: >-
-            ISO 3166 alpha-2 country code.
-          type: string
-          minLength: 2
-          maxLength: 2
     # ch.voev.nova.services.nova.v15.common.PostalAddress
     PostalAddress:
       type: object
       properties:
         countryCode: 
-          $ref: '#/components/schemas/CountryCode'
+          description: >-
+            ISO 3166 alpha-2 country code.
+          type: string
+          minLength: 2
+          maxLength: 2
+          readOnly: true
         street: 
           type: string
           maxLength: 30
