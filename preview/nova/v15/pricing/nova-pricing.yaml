@@ -35,42 +35,86 @@ paths:
         - name: Authorization
           in: header
           description: >- 
-            Authorization header is required for all requests to NOVA. In compliance with SBB / NOVA Zero-Trust policy, starting from NOVA 15, all clients need to have an authentication for the channel itself and for the acting user. Both information need to be provided within the authorization token.
-            
-            NOVA will still support requests from anonymous end users but in this case all features that somehow need access to personal data (e.g. TKID) will not be available.
-            
+            <html>
+              <head>
+            		<style>
+            			p {padding:0px; margin:0px;}
+            		</style>
+            	</head>
+              <body>
+            Authorization header is required for all requests to NOVA. In compliance with SBB / NOVA Zero-Trust policy, starting from NOVA 15, all clients need to have an authentication for the channel itself and for the acting user. Both information need to be provided within the authorization token.    
+            <br>    
+            <br>NOVA will still support requests from anonymous end users but in this case all features that somehow need access to personal data (e.g. TKID) will not be available.    
+            <br></body>
+            </html>
           required: true
           schema:
             type: string
         - name: Conversation-Id
           in: header
           description: >- 
-            Conversation id is used to group together a sequence of REST calls to NOVA. All requests that belong to the same business process are supposed to have the same conversation id.
+            <html>
+              <head>
+            		<style>
+            			p {padding:0px; margin:0px;}
+            		</style>
+            	</head>
+              <body>
+            Conversation id is used to group together a sequence of REST calls to NOVA. All requests that belong to the same business process are supposed to have the same conversation id.</body>
+            </html>
           required: false
           schema:
             type: string
         - name: Accept-Language
           in: header
           description: >- 
-            <html light="true"><body>Preferred language of the requesting client. Attribute can be filled according to logic of HTTP Header field as defined on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</a>. This explicitly includes weighting of languages (e.g. &quot;fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5&quot;).<br><br>However please be aware that NOVA in general only supports the languages &quot;de&quot;, &quot;fr&quot;, &quot;it&quot; and &quot;en&quot;.<br><br>Even though the parameter is optional it's strongly recommended to provide it in requests. If not default language will be used. Please be aware that NOVA's default language is not explicitly defined and may change over time without prior notice.</body></html>
+            <html>
+              <head>
+            		<style>
+            			p {padding:0px; margin:0px;}
+            		</style>
+            	</head>
+              <body>
+            Preferred language of the requesting client. Attribute can be filled according to logic of HTTP Header field as defined on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</a>. This explicitly includes weighting of languages (e.g. &quot;fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5&quot;).    
+            <br>    
+            <br>However please be aware that NOVA in general only supports the languages &quot;de&quot;, &quot;fr&quot;, &quot;it&quot; and &quot;en&quot;.    
+            <br>    
+            <br>Even though the parameter is optional it's strongly recommended to provide it in requests. If not default language will be used. Please be aware that NOVA's default language is not explicitly defined and may change over time without prior notice.</body>
+            </html>
           required: false
           schema:
             type: string
         - name: Date-Shift
           in: header
           description: >- 
-            Header field can be used to modify the date part of the request time stamp. It can either be defined as an absolute date in format YYYY-MM-DD or as an relative shift using '+' / '-' in combination with a shift value as absolute number for the amount of days that should be shifted (e.g. "-7" or "+2" days). 
-            
-            Date shift is only supported on non productive environments.
+            <html>
+              <head>
+            		<style>
+            			p {padding:0px; margin:0px;}
+            		</style>
+            	</head>
+              <body>
+            Header field can be used to modify the date part of the request time stamp. It can either be defined as an absolute date in format YYYY-MM-DD or as an relative shift using '+' / '-' in combination with a shift value as absolute number for the amount of days that should be shifted (e.g. &quot;-7&quot; or &quot;+2&quot; days).    
+            <br>    
+            <br>Date shift is only supported on non productive environments.</body>
+            </html>
           required: false
           schema:
             type: string
         - name: Time-Shift
           in: header
           description: >- 
-            Header field can be used to modify the time part of the request time stamp. It can either be defined as an absolute time in format HH:mm:ss or as an relative shift using '+' / '-' in combination with a shift value as absolute number for the amount of minutes that should be shifted (e.g. "-31" or "+120" minutes). 
-            
-            Time shift is only supported on non productive environments.
+            <html>
+              <head>
+            		<style>
+            			p {padding:0px; margin:0px;}
+            		</style>
+            	</head>
+              <body>
+            Header field can be used to modify the time part of the request time stamp. It can either be defined as an absolute time in format HH:mm:ss or as an relative shift using '+' / '-' in combination with a shift value as absolute number for the amount of minutes that should be shifted (e.g. &quot;-31&quot; or &quot;+120&quot; minutes).    
+            <br>    
+            <br>Time shift is only supported on non productive environments.</body>
+            </html>
           required: false
           schema:
             type: string
