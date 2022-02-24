@@ -79,7 +79,7 @@ paths:
             <br>    
             <br>However please be aware that NOVA in general only supports the languages &quot;de&quot;, &quot;fr&quot;, &quot;it&quot; and &quot;en&quot;.    
             <br>    
-            <br>Even though the parameter is optional it's strongly recommended to provide it in requests. If not default language will be used. Please be aware that NOVA's default language is not explicitly defined and may change over time without prior notice.</body>
+            <br>Even though the parameter is optional it's strongly recommended to provide it in requests, if not default language will be used. Please be aware that NOVA's default language is not explicitly defined and may change over time without prior notice.</body>
             </html>
           required: false
           schema:
