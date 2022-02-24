@@ -25,10 +25,19 @@ paths:
     post:
       operationId: createConnectionOffers
       parameters:
-        - name: tkid
+        - name: Business-Log-Level
           in: header
           description: >- 
-            TODO Please add comment
+            <html>
+              <head>
+            		<style>
+            			p {padding:0px; margin:0px;}
+            		</style>
+            	</head>
+              <body>
+            Level of detail for business related log information that should be generated when NOVA processes a request.    
+            <br>Valid values are &quot;OFF&quot;, &quot;SUMMARY&quot;, &quot;INFO&quot;, &quot;DEBUG&quot;</body>
+            </html>
           required: false
           schema:
             type: string

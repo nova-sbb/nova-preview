@@ -16,14 +16,37 @@ info:
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
 
 paths:
-  # OpenAPI standard requires to define at least 1 operation. This API however seems to be a pure type definition. 
-  # So we define NOP operation here as workaround.
-  /nop:
+  # BusinessLogService
+  /nova/v15/businesslog/{businessLogID}:
     get:
-      operationId: noOperation
+      operationId: getBusinessLog
+      parameters:
+        - name: businessLogID
+          in: path
+          description: >- 
+            TODO Please add comment
+          required: true
+          schema:
+            type: string
       responses:
         '200':
-          description: Nothing is the result of nop ;-)
+          description: >- 
+            TODO Please add comment
+          content:  
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessLog'
+        '400':
+          $ref: '#/components/responses/ErrorResponse'
+        '401':
+          $ref: '#/components/responses/ErrorResponse'
+        '403':
+          $ref: '#/components/responses/ErrorResponse'
+        '500':
+          $ref: '#/components/responses/ErrorResponse'
+        'default':
+          $ref: '#/components/responses/ErrorResponse'
+
 
 components:
   responses:
@@ -166,6 +189,9 @@ components:
           readOnly: true
       required:
         - code
+    # ch.voev.nova.services.nova.v15.common.BusinessLog
+    BusinessLog:
+      type: object
 
     
     # ch.voev.nova.services.nova.v15.common.MessageType
@@ -177,4 +203,13 @@ components:
         - INFO
         - WARNING
         - ERROR
+
+    # ch.voev.nova.services.nova.v15.common.BusinessLogLevel
+    BusinessLogLevel:
+      type: string
+      enum:
+        - OFF
+        - SUMMARY
+        - INFO
+        - DEBUG
 
