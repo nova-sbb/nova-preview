@@ -7,7 +7,7 @@ Please be aware that we just started working on NOVA 15. This means that all inf
 As soon as concepts and ideas are more stable we will start a review process to activley involve NOVA integrators to get their feedback.
 
 ## SwaggerUI ##
-* ~~[Latest released version](https://nova-sbb.github.io/nova/latest)~~ not yet available
+* ~~[Latest released version](https://nova-sbb.github.io/nova/latest) not yet available~~
 * [Preview version with maybe upcoming changes](https://nova-sbb.github.io/nova/preview)
 
 
