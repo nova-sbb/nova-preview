@@ -46,13 +46,31 @@ paths:
             
             NOVA will still support requests from anonymous end users but in this case all features that somehow need access to personal data (e.g. TKID) will not be available.
             
-          required: false
+          required: true
           schema:
             type: string
         - name: Accept-Language
           in: header
           description: >- 
             TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: Date-Shift
+          in: header
+          description: >- 
+            Header field can be used to modify the date part of the request time stamp. It can either be defined as an absolute date in format YYYY-MM-DD or as an relative shift using '+' / '-' in combination with a shift value as absolute number for the amount of days that should be shifted (e.g. "-7" or "+2" days). 
+            
+            Date shift is only supported on non productive environments.
+          required: false
+          schema:
+            type: string
+        - name: Time-Shift
+          in: header
+          description: >- 
+            Header field can be used to modify the time part of the request time stamp. It can either be defined as an absolute time in format HH:mm:ss or as an relative shift using '+' / '-' in combination with a shift value as absolute number for the amount of minutes that should be shifted (e.g. "-31" or "+120" minutes). 
+            
+            Time shift is only supported on non productive environments.
           required: false
           schema:
             type: string
