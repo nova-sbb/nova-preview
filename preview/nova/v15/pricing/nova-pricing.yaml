@@ -45,14 +45,14 @@ paths:
         - name: Conversation-Id
           in: header
           description: >- 
-            HTTP Header field Conversation-Id is used to group together a sequence of REST calls to NOVA. All requests that belong to the same business process are supposed to have the same conversation id.
+            Conversation id is used to group together a sequence of REST calls to NOVA. All requests that belong to the same business process are supposed to have the same conversation id.
           required: false
           schema:
             type: string
         - name: Accept-Language
           in: header
           description: >- 
-            TODO Please add comment
+            <html light="true"><body>Preferred language of the requesting client. Attribute can be filled according to logic of HTTP Header field as defined on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</a>. This explicitly includes weighting of languages (e.g. &quot;fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5&quot;).<br><br>However please be aware that NOVA in general only supports the languages &quot;de&quot;, &quot;fr&quot;, &quot;it&quot; and &quot;en&quot;.<br><br>Even though the parameter is optional it's strongly recommended to provide it in requests. If not default language will be used. Please be aware that NOVA's default language is not explicitly defined and may change over time without prior notice.</body></html>
           required: false
           schema:
             type: string
