@@ -32,13 +32,6 @@ paths:
           required: false
           schema:
             type: string
-        - name: Conversation-Id
-          in: header
-          description: >- 
-            HTTP Header field Conversation-Id is used to group together a sequence of REST calls to NOVA. All requests that belong to the same business process are supposed to have the same conversation id.
-          required: false
-          schema:
-            type: string
         - name: Authorization
           in: header
           description: >- 
@@ -47,6 +40,13 @@ paths:
             NOVA will still support requests from anonymous end users but in this case all features that somehow need access to personal data (e.g. TKID) will not be available.
             
           required: true
+          schema:
+            type: string
+        - name: Conversation-Id
+          in: header
+          description: >- 
+            HTTP Header field Conversation-Id is used to group together a sequence of REST calls to NOVA. All requests that belong to the same business process are supposed to have the same conversation id.
+          required: false
           schema:
             type: string
         - name: Accept-Language
