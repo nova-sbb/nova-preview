@@ -284,7 +284,7 @@ components:
       properties:
         countryCode: 
           description: >-
-            ISO 3166 alpha-2 country code.
+            ISO 3166 alpha-2 country code. These codes always consist of two capital letters like "CH" or "FR".
           type: string
           minLength: 2
           maxLength: 2
